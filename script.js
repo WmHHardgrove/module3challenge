@@ -1,18 +1,25 @@
 // Assignment code here
-//Git Push test
 
-
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  var password ="";
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var symbol = "!#$%&)(+,-./\\";
+  var number = "0123456789";
+  var charactersChosen = 0;
+  var newpass = "";
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  window.alert("Continue to set up your password.")
+
+var islowerCase = window.confirm("Do you want lowercase letters?");
+if (islowerCase) {
+   password = password.concat(islowerCase);
+   
+   charactersChosen++
+}
+
