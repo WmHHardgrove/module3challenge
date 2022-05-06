@@ -6,10 +6,10 @@ const newLocal = 0;
 // Write password to the #password input
 function writePassword() {
   var password ="";
-  var lowerCase =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-  var capital =["A","B","C","D"];
-  var symbol =["!","@","#","$"];
-  var number =["0","1","2","3","4","5","6","7","8","9"];
+  var lowerCase =["abcdefghijklmnopqrstuvwxyz"];
+  var capital =["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+  var symbol =["!@#$%^&*()_+=/"];
+  var number =["0123456789"];
   var charactersChosen = 0;
   var newpass = "";
   var randomnumber = "";
@@ -50,14 +50,13 @@ console.log(password);
 
 var passlength = window.prompt("How long should your password be?  8 - 128 characters!")
     for (var i=0; i < passlength; i++) {
-      var random = Math.floor(Math.random() * password.length);
-    
-  newpass = password.substring(randomnumber, randomnumber + 1)
+      var randomnumber = Math.floor(Math.random() * password.length);
+      newpass += password.substring(randomnumber, randomnumber + i) 
     }
-
+    
     console.log(newpass);
 
-      document.getElementById("newpassword").value;
+    document.getElementById("newpassword").value = newpass;
 
   }
       // Add event listener to generate button
